@@ -9,7 +9,7 @@
 let num1 = 22
 let num2 = 41
 let mult = num1 * num2
-let text = "la multiplicacion"
+let text = "la multiplicacion es: "
 console.log(num1 + num2)
 console.log(text + mult)
 
