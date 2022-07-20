@@ -137,8 +137,7 @@
 //tarea
 
 let num = prompt("ingrese numero")
-num = parseFloat(num)
-while(num !="esc" == num !="ESC")
+while(num !="esc")
 {
     if( 10 <= num && num <= 100){
     alert("el numero esta entre 10 y 100")
