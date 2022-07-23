@@ -47,6 +47,23 @@ function calculator(numero1,numero2,operation){
 // alert(calculator(+prompt("ingrese un numero"),+prompt("ingrese otro numero"),prompt("ingrese operation")))
 
 
+// objetos
 
+//construcciones
+
+function personas (nombre, edad, direccion){
+    this.nombre=nombre
+    this.edad=edad
+    this.direccion=direccion
+}
+
+const person1 = new personas ("Cristian",26,"borges1975")
+const person2 = new personas ("Cande",24,"Cordoba 3858")
+console.log(person1,person2,person1.edad)
+//fon...in
+
+for (const edad in person2){
+    console.log(person2.edad)
+}
 
 
