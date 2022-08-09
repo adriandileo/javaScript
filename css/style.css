@@ -12,6 +12,7 @@
     "semana2" 
     "semana3" 
     "semana4" 
+    "semana5"
     ;
     align-items: center;
     text-align: center; 
@@ -48,4 +49,11 @@
     height: 159px;
     border: solid 2px darkblue;
 
+}
+.dia4{
+    grid-area: semana5;
+    grid-column: auto;
+
+    height: 159px;
+    border: solid 2px darkblue;
 }
