@@ -22,3 +22,22 @@ function clickGuardar(){
 let fecha = document.getElementById("dia")
 fecha.addEventListener("input",()=>console.log(fecha.value))
 
+
+// guardar solo si 
+
+function guardar (){
+    let guardar = document.getElementById("guardar")
+    let record = document.getElementById("record")
+    let fecha = document.getElementById("dia")
+    if(guardar.onclick){
+        record.addEventListener("input",()=>console.log(record.value))
+        fecha.addEventListener("input",()=>console.log(fecha.value))
+    }else {
+        
+    }
+}
+
+// function clickGuardar(){
+//     let guardar = document.getElementById("guardar")
+//     guardar.onclick = () => {console.log("click")}
+// } 
