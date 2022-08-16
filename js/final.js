@@ -1,25 +1,39 @@
-//calendario
+//menu
 
-// function and class
-class Evento{
-    constructor(nombre,descripcion,mes,dia,hora){
-        this.nombre = nombre
-        this.descripcion = descripcion
-        this.mes= mes
-        this.dia = dia
-        this.hora = hora
+//productos
+
+class Comida {
+    constructor(nombre,descripcion,precio){
+        this.nombre=nombre
+        this.descripcion=descripcion
+        this.precio=precio
+    }
+    precioIva(){
+        precio= (precio+(precio*0,21))
     }
 }
+let comida=[]
+
+//boton!!!
+let agregar = document.getElementById("agregar")
+agregar.onclick= () => comida.push (new Comida (
+    prompt("ingrese nombre"),
+    prompt("ingrese descripcion"),
+    +prompt("ingrese precio")));
+
+//resultado
+console.log(comida)
+console.dir(comida)
+
+//vista
+
+let divComida = document.getElementById("comida")
 
 
-let eventos = []
 
-
-
-
-
-//guardado de datos
-let record = document.getElementById("record")
-record.addEventListener("input",()=>console.log(record.value))
-let fecha = document.getElementById("dia")
-fecha.addEventListener("input",()=>console.log(fecha.value))
+for (const comidas of comida){
+    let li = document.createElement("li")
+    li.innerHTML=comidas
+    divComida.appendChild(li)
+    
+}

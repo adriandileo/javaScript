@@ -6,7 +6,7 @@
 // if(false){
 //     alert("is true")
 // }
-// > <
+// <> 
 
 // condicional compuesto
 // var num = 500

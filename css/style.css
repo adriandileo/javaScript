@@ -18,7 +18,7 @@
     text-align: center; 
 }
 
-.dia{
+.titulo1{
     grid-area: semana;
     grid-column: auto;
     height: 159px;
@@ -26,7 +26,7 @@
 
 }
 
-.dia1{
+.img{
     grid-area: semana2;
     grid-column: auto;
 
@@ -34,26 +34,13 @@
     border: solid 2px darkblue;
 
 }
-.dia2{
+.texto1{
     grid-area: semana3;
     grid-column: auto;
+    grid-row: auto;
 
     height: 159px;
     border: solid 2px darkblue;
 
 }
-.dia3{
-    grid-area: semana4;
-    grid-column: auto;
 
-    height: 159px;
-    border: solid 2px darkblue;
-
-}
-.dia4{
-    grid-area: semana5;
-    grid-column: auto;
-
-    height: 159px;
-    border: solid 2px darkblue;
-}
