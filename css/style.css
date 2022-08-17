@@ -4,43 +4,48 @@
     letter-spacing: 20px;
 }
 
-#calendario{
+#menu{
     display: grid;
-    grid-template-columns: repeat(7,159px);
+    grid-template-columns:repeat(4,25%);
     grid-template-areas: 
-    "semana"  
-    "semana2" 
-    "semana3" 
-    "semana4" 
-    "semana5"
+    "titulo1"
+    "id"
+    "producto"
     ;
     align-items: center;
     text-align: center; 
 }
 
 .titulo1{
-    grid-area: semana;
-    grid-column: auto;
-    height: 159px;
+    grid-area: titulo1;
+    grid-column: 1/5;
+    grid-row: auto;
+    height: 40px;
     border: solid 2px darkblue;
+    letter-spacing: 20px;
+    font-weight: 700;
 
 }
-
-.img{
-    grid-area: semana2;
-    grid-column: auto;
-
-    height: 159px;
-    border: solid 2px darkblue;
-
-}
-.texto1{
-    grid-area: semana3;
-    grid-column: auto;
+.id{
+    grid-area: id;
+    grid-column: 1;
     grid-row: auto;
 
-    height: 159px;
+    height: auto;
     border: solid 2px darkblue;
-
+    font-weight: 500;
+    font-size: x-large;
+}
+.producto{
+    grid-area: producto;
+    grid-column: 2/4;
+    grid-row: auto;
+    font-weight: 500;
+    font-size: large;
+}
+.pedido{
+    grid-area: pedido;
+    grid-column: 4;
+    grid-row: auto;
 }
 
