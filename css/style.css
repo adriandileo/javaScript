@@ -6,7 +6,7 @@
 
 #menu{
     display: grid;
-    grid-template-columns:repeat(4,25%);
+    grid-template-columns:repeat(5,20%);
     grid-template-areas: 
     "titulo1"
     "id"
@@ -43,9 +43,16 @@
     font-weight: 500;
     font-size: large;
 }
+.precio{
+    grid-area: producto;
+    grid-column: 4;
+    grid-row: auto;
+    font-weight: 500;
+    font-size: large;
+}
 .pedido{
     grid-area: pedido;
-    grid-column: 4;
+    grid-column: 5;
     grid-row: auto;
 }
 

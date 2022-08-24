@@ -9,9 +9,11 @@ class Comida {
         this.precio=precio
      }
      precioIva(){
-         precio= (precio+(precio*0,21))
+        this.precio= (this.precio+(this.precio*0,21))
+        
      }
 }
+
 //boton!!!
 let agregar = document.getElementById("agregar")
 agregar.onclick= () => comida.push (new Comida (
@@ -20,32 +22,49 @@ agregar.onclick= () => comida.push (new Comida (
     +prompt("ingrese precio")));
 
 //resultado
-let comida=[{
-    nombre: "tortilla francesa",descripcion: "Omellet de huevo con jamon y queso", precio: 200},
-    {nombre:"toston de masa madre", descripcion:"pan de masa madre con tapenade de tomates, queso y polvo de olivas", precio:300}]
+let comida=[
+    {nombre: "tortilla francesa",descripcion: "Omellet de huevo con jamon y queso", precio: 300},
+    {nombre:"toston de masa madre", descripcion:"pan de masa madre con tapenade de tomates, queso y polvo de olivas", precio:300},
+    {nombre:"Sanwinch Campirano",descripcion:"Tostado de jamon y queso de pan de masa madre",precio:300},
+    {nombre:"Backroom Breackfast",descripcion:"Pan de masa madre con palta, huevo revuelto y panceta asada",precio:450},
+    {nombre:"Mediterranea",descripcion:"Toston de masa madre con rucula, strachatella y tomates disecados",precio:450},
+    {nombre:"Medialunas rellenas",descripcion:"Medialunas rellenas de lomito y queso tostadas",precio:200}
+    // {nombre:"",descripcion:"",precio:},
+    // {nombre:"",descripcion:"",precio:},
+    // {nombre:"",descripcion:"",precio:},
+]
 console.log(comida)
 console.dir(comida)
 
 let id = document.getElementById("id")
 let producto = document.getElementById("producto")
 let pedido = document.getElementById("pedido")
-
 const guardarLocal = (clave,valor) => { localStorage.setItem(clave, valor) };
 
-for (const comida1 of comida){
-    guardarLocal(comida1,JSON.stringify(comida))
-    console.log(comida1)
+for (const comida2 of comida){
+    guardarLocal(comida2.nombre,JSON.stringify(comida2))
+    console.log(comida2)
+    let contenedor = document.createElement("div")
+    contenedor.className="id"
+    contenedor.innerHTML= comida2.nombre
+    document.body,menu.appendChild(contenedor)
+    let contenedor2 = document.createElement("div")
+    contenedor2.className="producto"
+    contenedor2.innerHTML= comida2.descripcion
+    document.body,menu.appendChild(contenedor2)
+    let contenedor3 = document.createElement("div")
+    contenedor3.className="precio"
+    contenedor3.innerHTML= comida2.precio
+    document.body,menu.appendChild(contenedor3)
+    let btn=document.createElement("button")
+    btn.className="pedido"
+    btn.id=comida2.nombre
+    btn.innerHTML="+"
+    document.body,menu.appendChild(btn)
 
-    localStorage.setItem(id,comida1.nombre)
-    let id1 = localStorage.getItem(id)
-    console.log(id1)
-    localStorage.setItem(producto,comida1.descripcion)
-    let descripcion1=localStorage.getItem(producto)
-    console.log(descripcion1)
-    // localStorage.setItem(valor,comida1.precio)
-    // let valor1=localStorage.getItem(valor)
-    // console.log(valor1)
+    
 }
+
 let pedido1 = []
 let buttonPedido = document.getElementById("pedido")
 // buttonPedido.onclick = () => pedido.push ()
