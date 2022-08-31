@@ -59,7 +59,18 @@ for (const comida2 of comida){
     btn.innerHTML="+"
     document.body,menu.appendChild(btn)
     let orden =  document.getElementById(comida2.nombre)    
-    orden.onclick= () => orden1.push(new Orden(comida2.nombre))
+    orden.onclick= () => guardarLocal(orden1,JSON.stringify(orden1.push(new Orden(comida2.nombre))))
+     btn.addEventListener("click", () => {
+         Toastify({
+             text: "Agregado",
+             duration:1000,
+             gravity: "bottom",
+             position:"left"
+         }).showToast();
+     })
 }
+
+
+
 console.log(orden1)
 console.dir(orden1)
