@@ -3,7 +3,7 @@
 //     .then((json) => console.log(json));
 
 
-console.log(fetch("https://my-json-server.typicode.com/adriandileo/java"))
+console.log(fetch("https://my-json-server.typicode.com/adriandileo/java/archivos"))
 
 
 // {

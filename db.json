@@ -1,4 +1,6 @@
-[
+{
+    "post":
+    [
     {
         "nombre":"Aperol Spritz",
         "descipsion":"Aperol y espumante",
@@ -9,4 +11,8 @@
         "descipsion":"gin, limon, cassis y almibar",
         "precio":300
     }
-]
+],
+"profile":{
+    "name":"typicode"
+}
+}
