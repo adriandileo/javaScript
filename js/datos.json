@@ -1,8 +1,0 @@
-[
-    {"nombre": "Tortilla francesa","descripcion": "Omellet de huevo con jamon y queso", "precio": 300},
-    {"nombre":"Toston de masa madre", "descripcion":"Pan de masa madre con tapenade de tomates, queso y polvo de olivas", "precio":300},
-    {"nombre":"Sanwinch Campirano","descripcion":"Tostado de jamon y queso de pan de masa madre","precio":300},
-    {"nombre":"Backroom Breackfast","descripcion":"Pan de masa madre con palta, huevo revuelto y panceta asada","precio":450},
-    {"nombre":"Mediterranea","descripcion":"Toston de masa madre con rucula, strachatella y tomates disecados","precio":450},
-    {"nombre":"Medialunas rellenas","descripcion":"Medialunas rellenas de lomito y queso tostadas","precio":200}
-]
