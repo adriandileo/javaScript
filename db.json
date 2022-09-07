@@ -4,9 +4,9 @@
         "nombre": 1,
         "descripcion": "hello",
         "precio":200,
-      }
+      },
     ],
     "profile": {
       "name": "typicode"
-    };
+    },
 }
