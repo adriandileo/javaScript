@@ -1,3 +1,4 @@
+{"post":
 [
     {
       "nombre": 1,
@@ -8,4 +9,7 @@
      "descripcion":"assas"
      "precio":300,
     }
-  ]
+  ],
+ "profile":{
+     "name":"typecode"}
+}
