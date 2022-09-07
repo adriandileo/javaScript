@@ -1,4 +1,5 @@
-[
+{
+  [
   {"nombre":"Aperol Spritz"
    "descripcion":"apelor y espumante"
    "precio":200
@@ -6,4 +7,5 @@
 ],
 "profile":{
   "name":"tipycode"
+}
 }
