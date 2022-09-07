@@ -1,12 +1,11 @@
 {
-    "posts": [
-        {
-        "nombre": 1,
-        "descripcion": "hello",
-        "precio":200,
-      },
-    ],
-    "profile": {
-      "name": "typicode"
-    },
+  "posts": [
+    {
+      "id": 1,
+      "title": "hello"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
 }
