@@ -3,7 +3,7 @@
         {
         "nombre": 1,
         "descripcion": "hello",
-        "precio":200
+        "precio":200,
       }
     ],
     "profile": {
