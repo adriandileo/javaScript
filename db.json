@@ -1,15 +1,6 @@
-{
-  "posts": [
-    {
-      "id": 1,
-      "title": "hello"
-    },
-    {
-    "id":2,
-    "title":"adios"
-    }
-  ],
-  "profile": {
-    "name": "typicode"
+[
+  {"nombre":"Aperol Spritz"
+   "descripcion":"apelor y espumante"
+   "precio":200
   }
-}
+]
