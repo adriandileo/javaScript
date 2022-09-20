@@ -19,6 +19,7 @@ class Orden {
     }
     
 }
+
 //resultado
 let comida=[
     {nombre: "Tortilla francesa",descripcion: "Omellet de huevo con jamon y queso", precio: 300},
@@ -32,32 +33,34 @@ let comida=[
     // {nombre:"",descripcion:"",precio:},
 ]
 let orden1 = []
-console.log(comida)
-console.dir(comida)
+
+//console.log(comida)
+//console.dir(comida)
 const guardarLocal = (clave,valor) => { localStorage.setItem(clave, valor) };
 for (const comida2 of comida){
     guardarLocal(comida2,JSON.stringify(comida2))
-    console.log(comida2)
+    //console.log(comida2)
     let contenedor = document.createElement("div")
     contenedor.className="id"
     contenedor.innerHTML= comida2.nombre
-    document.body,menu.appendChild(contenedor)
+    document.body.menu,comidas.appendChild(contenedor)
 
     let contenedor2 = document.createElement("div")
     contenedor2.className="producto"
     contenedor2.innerHTML= comida2.descripcion
-    document.body,menu.appendChild(contenedor2)
+    document.body.menu,comidas.appendChild(contenedor2)
 
     let contenedor3 = document.createElement("div")
     contenedor3.className="precio"
     contenedor3.innerHTML= comida2.precio
-    document.body,menu.appendChild(contenedor3)
+    document.body.menu,comidas.appendChild(contenedor3)
 
     let btn=document.createElement("button")
     btn.className="pedido"
     btn.id=comida2.nombre
     btn.innerHTML="+"
-    document.body,menu.appendChild(btn)
+    document.body.menu,comidas.appendChild(btn)
+
     let orden =  document.getElementById(comida2.nombre)    
     orden.onclick= () => guardarLocal(orden1,JSON.stringify(orden1.push(new Orden(comida2.nombre))))
      btn.addEventListener("click", () => {
@@ -68,9 +71,15 @@ for (const comida2 of comida){
              position:"left"
          }).showToast();
      })
+
+    btn.addEventListener("click",()=>{
+    for (const orden of orden1){
+    guardarLocal(orden,JSON.stringify(orden))
+    console.log(orden)
+    
+
+}    
+} )
 }
-
-
-
 console.log(orden1)
-console.dir(orden1)
+//console.dir(orden1)

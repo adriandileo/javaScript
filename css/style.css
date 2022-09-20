@@ -4,7 +4,7 @@
     letter-spacing: 20px;
 }
 
-#menu{
+#comidas{
 
     display: grid;
     grid-template-columns:repeat(5,20%);
@@ -12,10 +12,12 @@
     "titulo1"
     "id"
     "producto"
+
     ;
     align-items: center;
     text-align: center; 
 }
+
 
 .titulo1{
     grid-area: titulo1;
@@ -57,3 +59,16 @@
     grid-row: auto;
 }
 
+#bebidas{
+
+    display: grid;
+    grid-template-columns:repeat(5,20%);
+    grid-template-areas: 
+    "titulo1"
+    "id"
+    "producto"
+
+    ;
+    align-items: center;
+    text-align: center; 
+}

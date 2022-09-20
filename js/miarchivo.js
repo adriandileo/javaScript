@@ -1,14 +1,4 @@
-class Alcohol {
-    constructor(nombre,descripcion,precio){
-        this.nombre=nombre
-        this.descripcion=descripcion
-        this.precio=precio
-     }
-     precioIva(){
-        this.precio= (this.precio+(this.precio*0,21))
-        
-     }
-}
+
 class Orden2 {
     constructor (id){
      this.nombre=id 
@@ -19,15 +9,34 @@ class Orden2 {
 //console.log(fetch("https://my-json-server.typicode.com/adriandileo/java/db"))
 
 const lista = document.getElementById("alcohol")
+const lista1 = document.querySelector('#listado')
 
 // console.log(fetch("my-json-server.typicode.com/adriandileo/java/posts/1"))
 
 fetch("https://my-json-server.typicode.com/adriandileo/java/db")
-    .then((alcohol) => alcohol.json())
-    .then((json) => console.log(json))
-    .then( (data) => {
-        console.log( data[1].nombre )
-        console.log( data[1].precio )
-        })
+//     // .then((alcohol) => alcohol.json())
+//     // .then((json) => console.log(json.bebidas))
+//     // .then((bebidas)=>{
+//     //     bebidas.forEach(bebidas => {
+//     //         guardarLocal(bebidas,JSON.stringify(bebidas))
+//     //         let contenedor = document.createElement("div")
+//     //         contenedor.className="id"
+//     //         contenedor.innerHTML= bebidas.nombre
+//     //         document.body,menu.appendChild(contenedor)
+          
+//     //      });
+//     // })
+    .then((bebidas)=>guardarLocal(bebidas,JSON.stringify(bebidas)))
+    .then((bebidas) => {
+        bebidas,nombre.forEach((bebidas) => {
+        const li = document.createElement('li')
+        li.innerHTML = `
+            <h4>${bebidas.nombre}</h4>
+            <p>${bebidas.precio}</p>
+            <p>Código: ${bebidas.descripcion}</p>
+            <hr/>
+        `
+    lista1.append(li)
+    })
+    })
 ;
-
