@@ -3,9 +3,35 @@
     font-weight: 500;
     letter-spacing: 20px;
 }
+.finalizarbtn{
+    padding: 20px;
+    
+}
+#sinAlcohol , #alcohol{
+    
+    font-size: large;
+}
+#finalizar{
+    text-align: center;
+}
+
+.pedidoFinal{
+    font-size: x-large;
+    font-weight: 500;
+    border: solid 2px gray;
+}
+
+body{
+    border: solid 4px black;
+}
+
+footer{
+    border: solid 4px gray;
+    padding-top: 20px;
+}
 
 #comidas{
-
+    padding-top: 20px;
     display: grid;
     grid-template-columns:repeat(5,20%);
     grid-template-areas: 
@@ -16,6 +42,7 @@
     ;
     align-items: center;
     text-align: center; 
+    border: solid 5px darkblue;
 }
 
 
@@ -60,7 +87,7 @@
 }
 
 #bebidas{
-
+    padding-top: 20px;
     display: grid;
     grid-template-columns:repeat(5,20%);
     grid-template-areas: 
@@ -71,4 +98,5 @@
     ;
     align-items: center;
     text-align: center; 
+    border: solid 5px rgba(120, 72, 231, 0.863);
 }

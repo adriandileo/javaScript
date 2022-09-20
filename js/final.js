@@ -4,20 +4,21 @@
 
 class Comida {
     constructor(nombre,descripcion,precio){
-        this.nombre=nombre
-        this.descripcion=descripcion
-        this.precio=precio
-     }
-     precioIva(){
-        this.precio= (this.precio+(this.precio*0,21))
-        
-     }
-}
-class Orden {
-    constructor (id){
-     this.nombre=id 
+       this.nombre=nombre
+       this.descripcion=descripcion
+       this.precio=precio
     }
-    
+    precioIva(){
+       this.precio= (this.precio+(this.precio*0,21))
+       
+    }
+}
+
+class Orden {
+    constructor (id,precio){
+     this.nombre=id 
+     this.precio=precio
+    }
 }
 
 //resultado
@@ -28,15 +29,14 @@ let comida=[
     {nombre:"Backroom Breackfast",descripcion:"Pan de masa madre con palta, huevo revuelto y panceta asada",precio:450},
     {nombre:"Mediterranea",descripcion:"Toston de masa madre con rucula, strachatella y tomates disecados",precio:450},
     {nombre:"Medialunas rellenas",descripcion:"Medialunas rellenas de lomito y queso tostadas",precio:200}
-    // {nombre:"",descripcion:"",precio:},
-    // {nombre:"",descripcion:"",precio:},
-    // {nombre:"",descripcion:"",precio:},
 ]
 let orden1 = []
 
 //console.log(comida)
 //console.dir(comida)
 const guardarLocal = (clave,valor) => { localStorage.setItem(clave, valor) };
+
+
 for (const comida2 of comida){
     guardarLocal(comida2,JSON.stringify(comida2))
     //console.log(comida2)
@@ -61,25 +61,36 @@ for (const comida2 of comida){
     btn.innerHTML="+"
     document.body.menu,comidas.appendChild(btn)
 
-    let orden =  document.getElementById(comida2.nombre)    
-    orden.onclick= () => guardarLocal(orden1,JSON.stringify(orden1.push(new Orden(comida2.nombre))))
-     btn.addEventListener("click", () => {
-         Toastify({
-             text: "Agregado",
-             duration:1000,
-             gravity: "bottom",
-             position:"left"
-         }).showToast();
-     })
+    let orden = document.getElementById(comida2.nombre)
+    orden.onclick= () => guardarLocal(orden1,JSON.stringify(orden1.push(new Orden(comida2.nombre,comida2.precio))))
+    //toastify
+    btn.addEventListener("click", () => {
+        Toastify({
+            text: "Agregado",
+            duration:1000,
+            gravity: "bottom",
+            position:"left"
+        }).showToast();
+    })
+}
 
-    btn.addEventListener("click",()=>{
+
+console.log(orden1)
+
+let finalizarbtn=document.createElement("button")
+finalizarbtn.className="finalizarbtn"
+finalizarbtn.innerHTML="Finalizar pedido"
+document.body.menu,finalizar.appendChild(finalizarbtn)
+
+finalizar.addEventListener("click",()=>{
     for (const orden of orden1){
     guardarLocal(orden,JSON.stringify(orden))
-    console.log(orden)
+    console.log(orden.nombre)
+    let pedido = document.createElement("div")
+    pedido.className="pedidoFinal"
+    pedido.innerHTML= orden.nombre
+    document.body.footer,pedidos.appendChild(pedido)
     
-
-}    
-} )
 }
-console.log(orden1)
-//console.dir(orden1)
+
+}) 

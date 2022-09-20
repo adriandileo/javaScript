@@ -3,9 +3,10 @@ botonMayor.className="mayor"
 botonMayor.id="alcohol"
 botonMayor.innerHTML="MAYOR DE EDAD"
 document.body.header,boton18.appendChild(botonMayor)
+
 const botonMenor = document.createElement("button")
-botonMenor.className="mayor"
-botonMenor.id="alcohol"
+botonMenor.className="menor"
+botonMenor.id="sinAlcohol"
 botonMenor.innerHTML="MAYOR DE EDAD"
 document.body.header,boton18.appendChild(botonMenor)
 
@@ -95,7 +96,7 @@ const guardarLocal1 = (clave,valor) => { localStorage.setItem(clave, valor) };
 botonMayor.addEventListener("click",()=> {
 for(const alcohol1 of alcohol){
     guardarLocal1(alcohol1,JSON.stringify(alcohol1))
-    console.log(alcohol1)
+    // console.log(alcohol1)
     let contenedor = document.createElement("div")
     contenedor.className="id"
     contenedor.innerHTML= alcohol1.nombre
@@ -117,7 +118,7 @@ for(const alcohol1 of alcohol){
     btn.innerHTML="+"
     document.body.menu,bebidas.appendChild(btn)
     let orden =  document.getElementById(alcohol1.nombre)    
-    orden.onclick= () => guardarLocal(orden1,JSON.stringify(orden1.push(new Orden(alcohol1.nombre))))
+    orden.onclick= () => guardarLocal(orden1,JSON.stringify(orden1.push(new Orden(alcohol1.nombre,alcohol1.precio))))
 
     btn.addEventListener("click", () => {
          Toastify({
@@ -127,17 +128,13 @@ for(const alcohol1 of alcohol){
              position:"left"
          }).showToast();
     })
-    btn.addEventListener("click",()=>{
-        for (const orden of orden1){
-        guardarLocal(orden,JSON.stringify(orden))
-        console.log(orden)}})
 }
 })
 
 botonMenor.addEventListener("click",()=> {
     for(const sinAlcohol of sinalcohol){
         guardarLocal1(sinAlcohol,JSON.stringify(sinAlcohol))
-        console.log(sinAlcohol)
+        // console.log(sinAlcohol)
         let contenedor = document.createElement("div")
         contenedor.className="id"
         contenedor.innerHTML= sinAlcohol.nombre
@@ -159,7 +156,7 @@ botonMenor.addEventListener("click",()=> {
         btn.innerHTML="+"
         document.body.menu,bebidas.appendChild(btn)
         let orden =  document.getElementById(sinAlcohol.nombre)    
-        orden.onclick= () => guardarLocal(orden1,JSON.stringify(orden1.push(new Orden(sinAlcohol.nombre))))
+        orden.onclick= () => guardarLocal(orden1,JSON.stringify(orden1.push(new Orden(sinAlcohol.nombre,sinAlcohol.precio))))
         btn.addEventListener("click", () => {
              Toastify({
                  text: "Agregado",
@@ -167,13 +164,6 @@ botonMenor.addEventListener("click",()=> {
                  gravity: "bottom",
                  position:"left"
              }).showToast();
-        })
-        
-        btn.addEventListener("click",()=>{
-            for (const orden of orden1){
-            guardarLocal(orden,JSON.stringify(orden))
-            console.log(orden)}})
-        
-        
+        })       
     }    
 })
