@@ -3,19 +3,48 @@
     font-weight: 500;
     letter-spacing: 20px;
 }
+.finalizarbtn{
+    padding: 20px;
+    
+}
+#sinAlcohol , #alcohol{
+    
+    font-size: large;
+}
+#finalizar{
+    text-align: center;
+}
 
-#menu{
+.pedidoFinal{
+    font-size: x-large;
+    font-weight: 500;
+    border: solid 2px gray;
+}
 
+body{
+    border: solid 4px black;
+}
+
+footer{
+    border: solid 4px gray;
+    padding-top: 20px;
+}
+
+#comidas{
+    padding-top: 20px;
     display: grid;
     grid-template-columns:repeat(5,20%);
     grid-template-areas: 
     "titulo1"
     "id"
     "producto"
+
     ;
     align-items: center;
     text-align: center; 
+    border: solid 5px darkblue;
 }
+
 
 .titulo1{
     grid-area: titulo1;
@@ -57,3 +86,17 @@
     grid-row: auto;
 }
 
+#bebidas{
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns:repeat(5,20%);
+    grid-template-areas: 
+    "titulo1"
+    "id"
+    "producto"
+
+    ;
+    align-items: center;
+    text-align: center; 
+    border: solid 5px rgba(120, 72, 231, 0.863);
+}
