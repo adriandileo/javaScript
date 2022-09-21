@@ -2,18 +2,23 @@
     "bebidas":
     [
     {
-        "nombre":"Aperol Spritz",
-        "descipsion":"Aperol y espumante",
-        "precio":200
-    },
-    {
-        "nombre":"Bramble",
-        "descipsion":"gin, limon, cassis y almibar",
+        "nombre":"Manhattan",
+        "descipsion":"Whisky canadiense, Vermouth y dash de bitter",
         "precio":300
     },
     {
-        "nombre":"gimlet",
-        "descipsion":"gin, limon y almibar",
+        "nombre":"Negroni",
+        "descipsion":"Gin, Vermouth, Bitter de campari en partes iguales, con piel de naranja",
+        "precio":300
+    },
+    {
+        "nombre":"Gibson",
+        "descipsion":"Gin, Vermouth dry y de garnish un cebollin",
+        "precio":250
+    },
+    {
+        "nombre":"Dry Martini",
+        "descipsion":"Gin, Vermouth dry y de garnish una aceituna ",
         "precio":250
     }
 ],
