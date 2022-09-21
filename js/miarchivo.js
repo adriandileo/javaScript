@@ -6,7 +6,6 @@ fetch("https://my-json-server.typicode.com/adriandileo/java/db")
     .then((alcohol)=> botonMayor.addEventListener("click",()=>{
         for (const bebida of alcohol.bebidas){
             guardarLocal(bebida,JSON.stringify(bebida))
-            console.log(bebida)
             let contenedor = document.createElement("div")
             contenedor.className="id"
             contenedor.innerHTML= bebida.nombre
@@ -32,7 +31,7 @@ fetch("https://my-json-server.typicode.com/adriandileo/java/db")
 
             let orden = document.getElementById(bebida.nombre)
             orden.onclick= () => guardarLocal(orden1,JSON.stringify(orden1.push(new Orden(bebida.nombre,bebida.precio))))
-            //toastify
+
             btn.addEventListener("click", () => {
                 Toastify({
                     text: "Agregado",

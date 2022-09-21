@@ -1,3 +1,4 @@
+
 #encabezado{
     text-align: center;
     font-weight: 500;
@@ -22,12 +23,14 @@
 }
 
 body{
-    border: solid 4px black;
+    border:dashed 4px black;
+    background-color: rgb(236, 240, 241);
 }
 
 footer{
     border: solid 4px gray;
     padding-top: 20px;
+    text-align: center;
 }
 
 #comidas{
@@ -42,7 +45,7 @@ footer{
     ;
     align-items: center;
     text-align: center; 
-    border: solid 5px darkblue;
+    border: outset 5px rgb(111, 111, 156);
 }
 
 
@@ -51,7 +54,7 @@ footer{
     grid-column: 1/5;
     grid-row: auto;
     height: 40px;
-    border: solid 2px darkblue;
+    border:  inset 2px darkblue;
     letter-spacing: 20px;
     font-weight: 700;
 
@@ -72,6 +75,7 @@ footer{
     grid-row: auto;
     font-weight: 500;
     font-size: large;
+    
 }
 .precio{
     grid-area: producto;
@@ -79,6 +83,8 @@ footer{
     grid-row: auto;
     font-weight: 500;
     font-size: large;
+    border: solid 2px darkblue;
+
 }
 .pedido{
     grid-area: pedido;
@@ -98,5 +104,5 @@ footer{
     ;
     align-items: center;
     text-align: center; 
-    border: solid 5px rgba(120, 72, 231, 0.863);
+    border: outset 5px rgba(120, 72, 231, 0.863);
 }

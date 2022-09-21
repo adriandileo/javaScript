@@ -21,7 +21,6 @@ class Orden {
     }
 }
 
-//resultado
 let comida=[
     {nombre: "Tortilla francesa",descripcion: "Omellet de huevo con jamon y queso", precio: 300},
     {nombre:"Toston de masa madre", descripcion:"Pan de masa madre con tapenade de tomates, queso y polvo de olivas", precio:300},
@@ -32,14 +31,12 @@ let comida=[
 ]
 let orden1 = []
 
-//console.log(comida)
-//console.dir(comida)
 const guardarLocal = (clave,valor) => { localStorage.setItem(clave, valor) };
 
 
 for (const comida2 of comida){
     guardarLocal(comida2,JSON.stringify(comida2))
-    //console.log(comida2)
+
     let contenedor = document.createElement("div")
     contenedor.className="id"
     contenedor.innerHTML= comida2.nombre
@@ -63,7 +60,6 @@ for (const comida2 of comida){
 
     let orden = document.getElementById(comida2.nombre)
     orden.onclick= () => guardarLocal(orden1,JSON.stringify(orden1.push(new Orden(comida2.nombre,comida2.precio))))
-    //toastify
     btn.addEventListener("click", () => {
         Toastify({
             text: "Agregado",
